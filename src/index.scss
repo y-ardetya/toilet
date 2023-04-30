@@ -1,0 +1,36 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-y: hidden;
+}
+
+.navbar {
+  position: absolute;
+  z-index: 1;
+  width: 100vw;
+  height: 40px;
+  margin-top: 20px;
+
+  ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-around;
+    text-align: justify;
+    align-content: center;
+
+    li {
+      color: rgb(255, 255, 255);
+      font-weight: bold;
+      text-shadow: aliceblue;
+
+    }
+  }
+}
