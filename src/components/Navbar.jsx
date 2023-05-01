@@ -4,8 +4,8 @@ const Navbar = () => {
       <ul>
         <li>HOME</li>
         <li>CREEPYPASTA</li>
-        <li>CONTACT</li>
-        <li>EMAIL</li>
+        <li>SUBMIT THE HORROR</li>
+        <li>DISCORD</li>
       </ul>
     </div>
   );

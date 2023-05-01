@@ -1,25 +1,17 @@
 import Toilet from "./Toilet";
-import {
-  OrbitControls,
-  PresentationControls,
-  useTexture,
-} from "@react-three/drei";
+import { PresentationControls, useTexture } from "@react-three/drei";
 import Vandal from "./Vandal";
-import { useFrame } from "@react-three/fiber";
-import { Vector3 } from "three";
 
 const Experience = () => {
-  const normalMap = useTexture("/texture2/normal.jpg");
-  const roughnessMap = useTexture("/texture2/rough.jpg");
-  const displacementMap = useTexture("/texture2/height.png");
-  const color = useTexture("/texture2/color.jpg");
-  const aoMap = useTexture("/texture2/ao.jpg");
-  const metalMap = useTexture("/texture2/metal.jpg");
+  const normalMap = useTexture("/texture/normal.jpg");
+  const roughnessMap = useTexture("/texture/rough.jpg");
+  const displacementMap = useTexture("/texture/height.png");
+  const color = useTexture("/texture/color.jpg");
+  const aoMap = useTexture("/texture/ao.jpg");
+  const metalMap = useTexture("/texture/metal.jpg");
 
   return (
     <>
-      <color attach="background" args={["#000"]} />
-      <fog attach="fog" args={["#000", 0, 14]} />
       <ambientLight intensity={1} />
       <spotLight
         intensity={10}
@@ -37,11 +29,12 @@ const Experience = () => {
       />
       <PresentationControls
         global
-        polar={[-0.4, 0.2]}
-        azimuth={[-0.75, 0.75]}
+        polar={[-0.3, 0.2]}
+        azimuth={[-0.6, 0.6]}
         config={{ mass: 1, tension: 50 }}
         snap={{ mass: 1, tension: 50 }}
       >
+        //*floor
         <mesh
           rotation={[-Math.PI / 2, 0, 0]}
           position={[0, -3.9, 1]}
@@ -49,6 +42,7 @@ const Experience = () => {
         >
           <planeGeometry args={[1, 1]} />
           <meshStandardMaterial
+            side={2}
             normalMap={normalMap}
             roughnessMap={roughnessMap}
             displacementMap={displacementMap}

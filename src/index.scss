@@ -2,6 +2,8 @@
 
 * {
   box-sizing: border-box;
+  scroll-behavior: smooth;
+  scroll-snap-align: start;
 }
 
 html,
@@ -12,10 +14,11 @@ body,
   margin: 0;
   padding: 0;
   font-family: "Darumadrop One", cursive;
+  overflow: hidden;
 }
 
 .navbar {
-  position: absolute;
+  position: relative;
   z-index: 1;
   width: 100vw;
   height: 3em;
@@ -43,5 +46,17 @@ body,
         cursor: pointer;
       }
     }
+  }
+}
+
+.section-two {
+  margin-top: 110vh;
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  z-index: 1;
+
+  h1 {
+    color: aliceblue;
   }
 }
