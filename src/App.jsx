@@ -1,6 +1,9 @@
 import { Canvas } from "@react-three/fiber";
 import Experience from "./components/Experience";
 import { PerspectiveCamera } from "@react-three/drei";
+import { EffectComposer, Noise } from "@react-three/postprocessing";
+import { BlendFunction } from "postprocessing";
+import { Perf } from "r3f-perf";
 
 const App = () => {
   return (
@@ -17,7 +20,7 @@ const App = () => {
         gl={{
           antialias: true,
           outputEncoding: "sRGB",
-          physicallyCorrectLights: true,
+          // physicallyCorrectLights: true,
         }}
       >
         <PerspectiveCamera
@@ -26,8 +29,11 @@ const App = () => {
           fov={55}
           rotation={[0, 0.4, 0]}
         />
-
+        <Perf />
         <Experience />
+        <EffectComposer>
+          <Noise premultiply blendFunction={BlendFunction.ADD} />
+        </EffectComposer>
       </Canvas>
     </>
   );

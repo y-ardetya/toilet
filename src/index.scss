@@ -16,21 +16,22 @@ body,
   position: absolute;
   z-index: 1;
   width: 100vw;
-  height: 40px;
-  margin-top: 20px;
+  height: 60px;
+  background-color: gray;
 
   ul {
     list-style-type: none;
     display: flex;
     justify-content: space-around;
-    text-align: justify;
-    align-content: center;
+    align-items: center;
+    height: 100%;
+    padding: 0;
+    margin: 0;
 
     li {
       color: rgb(255, 255, 255);
       font-weight: bold;
       text-shadow: aliceblue;
-
     }
   }
 }
