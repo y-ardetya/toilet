@@ -28,11 +28,10 @@ const Experience = () => {
         distance={Math.PI * 10}
       />
       <PresentationControls
-        global
         polar={[-0.3, 0.2]}
-        azimuth={[-0.6, 0.6]}
+        azimuth={[-0.5, 0.5]}
         config={{ mass: 1, tension: 50 }}
-        snap={{ mass: 1, tension: 50 }}
+        snap={{ mass: 2, tension: 25 }}
       >
         //*floor
         <mesh

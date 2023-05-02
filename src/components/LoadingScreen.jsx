@@ -5,7 +5,7 @@ const LoadingScreen = () => {
   const { active, progress } = useProgress();
   useEffect(() => {}, [active, progress]);
   return (
-    <Html style={{ color: "red", fontSize: "10em" }} center>
+    <Html style={{ color: "white", fontSize: "10em" }} center>
       {progress} % loaded
     </Html>
   );
