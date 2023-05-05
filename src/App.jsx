@@ -2,7 +2,6 @@ import { Canvas } from "@react-three/fiber";
 import Experience from "./components/Experience";
 import { PerspectiveCamera, Scroll, ScrollControls } from "@react-three/drei";
 import { Suspense } from "react";
-import Navbar from "./components/Navbar";
 import Effect from "./components/Effect";
 import Mirror from "./components/Mirror";
 import LoadingScreen from "./components/LoadingScreen";
@@ -11,7 +10,6 @@ import Card from "./components/Card";
 const App = () => {
   return (
     <>
-      <Navbar />
       <Canvas
         gl={{
           antialias: true,
@@ -25,7 +23,7 @@ const App = () => {
             fov={65}
             rotation={[0.01, 0, 0]}
           />
-          <fog attach="fog" args={["#000", 1, 15]} />
+          <fog attach="fog" args={["#000", 3, 15]} />
           <ScrollControls pages={2} damping={0.5}>
             <Scroll>
               <Experience />

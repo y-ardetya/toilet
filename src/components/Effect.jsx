@@ -1,4 +1,4 @@
-import { EffectComposer, Noise, Vignette } from "@react-three/postprocessing";
+import { Bloom, EffectComposer, Noise, Vignette } from "@react-three/postprocessing";
 import { BlendFunction } from "postprocessing";
 
 const Effect = () => {
@@ -6,6 +6,7 @@ const Effect = () => {
     <EffectComposer>
       <Noise premultiply blendFunction={BlendFunction.ADD} />
       <Vignette eskil={false} offset={0.3} darkness={0.9} />
+      <Bloom luminanceThreshold={0} luminanceSmoothing={0.2} height={600} />
     </EffectComposer>
   );
 };

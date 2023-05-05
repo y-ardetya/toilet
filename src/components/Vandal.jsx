@@ -19,7 +19,7 @@ const Vandal = () => {
         anchorX={"center"}
         anchorY={"middle"}
       >
-        "Delve into the darkest corners of the human psyche and uncover chilling tales that will haunt your dreams - welcome to WC.COM, where nightmares become reality and the line between fiction and terror blurs."
+        "Delve into the darkest corners of the human psyche and uncover chilling tales that will haunt your dreams - welcome to X, where nightmares become reality and the line between fiction and terror blurs."
       </Text>
       <Text
         font="/LosmentHunter-1G1ve.ttf"

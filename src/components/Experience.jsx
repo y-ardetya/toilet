@@ -1,6 +1,15 @@
 import Toilet from "./Toilet";
-import { PresentationControls, useTexture } from "@react-three/drei";
+import {
+  PresentationControls,
+  useTexture,
+  useHelper,
+  Image,
+} from "@react-three/drei";
 import Vandal from "./Vandal";
+import Lamp from "./Lamp";
+import { useRef } from "react";
+import * as THREE from "three";
+import blood from "../assets/blood.svg";
 
 const Experience = () => {
   const normalMap = useTexture("/texture/normal.jpg");
@@ -10,28 +19,24 @@ const Experience = () => {
   const aoMap = useTexture("/texture/ao.jpg");
   const metalMap = useTexture("/texture/metal.jpg");
 
+  const spotLight = useRef();
+  useHelper(spotLight, THREE.DirectionalLightHelper, "cyan");
   return (
     <>
-      <ambientLight intensity={1} />
+      <ambientLight intensity={0.5} />
       <spotLight
         intensity={10}
-        penumbra={1.5}
-        position={[-2, 2, 0]}
+        penumbra={2}
+        position={[0.2, 10, 0]}
         color="orange"
-        distance={Math.PI * 5}
+        distance={Math.PI * 3}
       />
-      <spotLight
-        intensity={10}
-        penumbra={1.5}
-        position={[2, 2, 0]}
-        color="orange"
-        distance={Math.PI * 10}
-      />
+      <directionalLight intensity={3} position={[0.2, 6, 0]} color="orange" />
       <PresentationControls
         polar={[-0.3, 0.2]}
         azimuth={[-0.5, 0.5]}
         config={{ mass: 1, tension: 50 }}
-        snap={{ mass: 2, tension: 25 }}
+        snap={{ mass: 2, tension: 75 }}
       >
         //*floor
         <mesh
@@ -85,6 +90,15 @@ const Experience = () => {
           />
         </mesh>
         <Toilet />
+        <Image
+          url={blood}
+          position={[5.15, -0.2, 0.54]}
+          rotation={[0, -1.537, 0]}
+          scale={5}
+          transparent
+          opacity={0.5}
+        />
+        <Lamp />
         <Vandal />
       </PresentationControls>
     </>
