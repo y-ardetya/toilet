@@ -6,7 +6,7 @@ const Effect = () => {
     <EffectComposer>
       <Noise premultiply blendFunction={BlendFunction.ADD} />
       <Vignette eskil={false} offset={0.3} darkness={0.9} />
-      <Bloom luminanceThreshold={0} luminanceSmoothing={0.2} height={600} />
+      <Bloom luminanceThreshold={1} luminanceSmoothing={0.2} height={600} />
     </EffectComposer>
   );
 };

@@ -25,7 +25,7 @@ const App = () => {
             rotation={[0.01, 0, 0]}
           />
           <fog attach="fog" args={["#000", 3, 15]} />
-          <ScrollControls pages={2} damping={0.5}>
+          <ScrollControls pages={3} damping={0.3} distance={1}>
             <Scroll html>
               <Navbar />
             </Scroll>

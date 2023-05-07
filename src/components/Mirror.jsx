@@ -1,27 +1,7 @@
-import { MeshTransmissionMaterial, Text } from "@react-three/drei";
+import { Text } from "@react-three/drei";
 import Mask from "./Mask";
 import { useRef, useState } from "react";
 import { useFrame } from "@react-three/fiber";
-
-const TransCube = (props) => {
-  const ref = useRef();
-
-  useFrame((state, delta) => {
-    ref.current.rotation.y += delta * 0.5;
-    ref.current.rotation.x += delta * 0.5;
-  });
-  return (
-    <mesh {...props} ref={ref}>
-      <boxGeometry />
-      <MeshTransmissionMaterial
-        ior={1.2}
-        thickness={1.5}
-        anisotropy={0.1}
-        chromaticAberration={0.04}
-      />
-    </mesh>
-  );
-};
 
 const Mirror = () => {
   const texRef = useRef();
@@ -51,7 +31,6 @@ const Mirror = () => {
       >
         Contribute to this site here
       </Text>
-      <TransCube position={[0, -7, 5]} scale={2} />
     </>
   );
 };
