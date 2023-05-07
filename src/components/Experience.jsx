@@ -1,14 +1,7 @@
 import Toilet from "./Toilet";
-import {
-  PresentationControls,
-  useTexture,
-  useHelper,
-  Image,
-} from "@react-three/drei";
+import { PresentationControls, useTexture, Image } from "@react-three/drei";
 import Vandal from "./Vandal";
 import Lamp from "./Lamp";
-import { useRef } from "react";
-import * as THREE from "three";
 import blood from "../assets/blood.svg";
 
 const Experience = () => {
@@ -19,19 +12,12 @@ const Experience = () => {
   const aoMap = useTexture("/texture/ao.jpg");
   const metalMap = useTexture("/texture/metal.jpg");
 
-  const spotLight = useRef();
-  useHelper(spotLight, THREE.DirectionalLightHelper, "cyan");
   return (
     <>
       <ambientLight intensity={0.5} />
-      <spotLight
-        intensity={10}
-        penumbra={2}
-        position={[0.2, 10, 0]}
-        color="orange"
-        distance={Math.PI * 3}
-      />
-      <directionalLight intensity={3} position={[0.2, 6, 0]} color="orange" />
+
+      <pointLight intensity={5} position={[0.2, 5.2, 0]} color="orange" />
+
       <PresentationControls
         polar={[-0.3, 0.2]}
         azimuth={[-0.5, 0.5]}

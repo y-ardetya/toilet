@@ -18,3 +18,20 @@ body,
   background-color: black;
 }
 
+.nav {
+  color: #f0f8ff;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100vw;
+
+  h1 {
+    font-size: 20px;
+
+    &:hover {
+      cursor: pointer;
+      color: red;
+      transition: all 0.4s ease-in-out;
+    }
+  }
+}

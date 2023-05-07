@@ -6,6 +6,7 @@ import Effect from "./components/Effect";
 import Mirror from "./components/Mirror";
 import LoadingScreen from "./components/LoadingScreen";
 import Card from "./components/Card";
+import Navbar from "./components/Navbar";
 
 const App = () => {
   return (
@@ -25,6 +26,9 @@ const App = () => {
           />
           <fog attach="fog" args={["#000", 3, 15]} />
           <ScrollControls pages={2} damping={0.5}>
+            <Scroll html>
+              <Navbar />
+            </Scroll>
             <Scroll>
               <Experience />
               <Effect />
