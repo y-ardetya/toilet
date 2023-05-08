@@ -15,8 +15,6 @@ export default function Scary(props) {
   const { nodes, materials, animations } = useGLTF("/scary-transformed.glb");
   const { actions } = useAnimations(animations, group);
 
-  console.log(actions);
-
   useEffect(() => {
     actions["Idle"].play();
   }, []);

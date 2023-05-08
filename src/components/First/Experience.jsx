@@ -4,12 +4,14 @@ import Vandal from "./Vandal";
 import Lamp from "../Model/Lamp";
 import blood from "../../assets/blood.svg";
 import Room from "./Room";
+import TrailingLight from "../TrailingLight";
 
 const Experience = () => {
   return (
     <>
-      <ambientLight intensity={0.2} />
-      <pointLight intensity={2} position={[0.2, 5.2, 0]} color="orange" />
+      <ambientLight intensity={0.1} />
+      <pointLight intensity={1.2} position={[0, 5.2, 0]} color="orange" />
+      <TrailingLight />
       <PresentationControls
         polar={[-0.3, 0.2]}
         azimuth={[-0.5, 0.5]}
@@ -21,7 +23,7 @@ const Experience = () => {
         <Toilet />
         <Image
           url={blood}
-          position={[5.15, -0.2, 0.54]}
+          position={[5.63, -0.2, 0.54]}
           rotation={[0, -1.537, 0]}
           scale={5}
           transparent

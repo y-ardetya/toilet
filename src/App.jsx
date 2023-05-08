@@ -1,6 +1,7 @@
 import { Canvas } from "@react-three/fiber";
 import Experience from "./components/First/Experience";
 import {
+  Loader,
   OrbitControls,
   PerspectiveCamera,
   Scroll,
@@ -41,6 +42,7 @@ const App = () => {
           </ScrollControls>
         </Suspense>
       </Canvas>
+      <Loader />
     </>
   );
 };

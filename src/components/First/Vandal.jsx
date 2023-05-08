@@ -5,7 +5,7 @@ const Vandal = () => {
     <>
       <Text
         font="/LosmentHunter-1G1ve.ttf"
-        position={[-4.98, 1.62, -2.53]}
+        position={[-5.50, 1.62, -2.53]}
         rotation={[0, 1.52, 0]}
       >
         Look behind you !
@@ -23,7 +23,7 @@ const Vandal = () => {
       </Text>
       <Text
         font="/LosmentHunter-1G1ve.ttf"
-        position={[5.13, -0.2, 0.54]}
+        position={[5.6, -0.2, 0.54]}
         rotation={[0, -1.537, 0]}
         fontSize={1.5}
       >
