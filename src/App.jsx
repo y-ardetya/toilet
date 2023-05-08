@@ -1,31 +1,31 @@
 import { Canvas } from "@react-three/fiber";
-import Experience from "./components/Experience";
-import { PerspectiveCamera, Scroll, ScrollControls } from "@react-three/drei";
+import Experience from "./components/First/Experience";
+import {
+  OrbitControls,
+  PerspectiveCamera,
+  Scroll,
+  ScrollControls,
+} from "@react-three/drei";
 import { Suspense } from "react";
 import Effect from "./components/Effect";
-import Mirror from "./components/Mirror";
-import LoadingScreen from "./components/LoadingScreen";
-import Card from "./components/Card";
-import Navbar from "./components/Navbar";
+import Mirror from "./components/Second/Mirror";
+import Card from "./components/Second/Card";
+import Navbar from "./components/First/Navbar";
+import Monster from "./components/Second/Monster";
 
 const App = () => {
   return (
     <>
-      <Canvas
-        gl={{
-          antialias: true,
-          outputEncoding: "sRGB",
-        }}
-      >
-        <Suspense fallback={<LoadingScreen />}>
+      <Canvas gl={{ antialias: true }}>
+        <Suspense fallback={null}>
           <PerspectiveCamera
             makeDefault
             position={[0, 0.7, 10.5]}
             fov={65}
             rotation={[0.01, 0, 0]}
           />
-          <fog attach="fog" args={["#000", 3, 15]} />
-          <ScrollControls pages={3} damping={0.3} distance={1}>
+          <fog attach="fog" args={["#000", -2, 18]} />
+          <ScrollControls pages={3} damping={0.3} distance={1.2}>
             <Scroll html>
               <Navbar />
             </Scroll>
@@ -36,6 +36,7 @@ const App = () => {
             <Scroll>
               <Mirror />
               <Card />
+              <Monster />
             </Scroll>
           </ScrollControls>
         </Suspense>

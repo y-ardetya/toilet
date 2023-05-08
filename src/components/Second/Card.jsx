@@ -7,21 +7,20 @@ const Card = () => {
   const data = useScroll();
 
   useFrame(() => {
-    group.current.children[0].material.zoom =
+    group.current.children[0].material.grayscale =
       1 + data.range(1.25 / 3, 1 / 3) / 1;
-    group.current.children[1].material.zoom = 
-      1 + data.range(0, 1 / 3) / 1;
-    group.current.children[2].material.zoom =
+    group.current.children[1].material.grayscale = 1 + data.range(0, 1 / 3) / 1;
+    group.current.children[2].material.grayscale =
       1 + data.range(1.15 / 3, 1 / 3) / 3;
-    group.current.children[3].material.zoom =
+    group.current.children[3].material.grayscale =
       1 + data.range(1.15 / 3, 1 / 3) / 2;
-    group.current.children[4].material.zoom =
+    group.current.children[4].material.grayscale =
       1 + data.range(1.25 / 3, 1 / 3) / 1;
-    group.current.children[5].material.zoom =
+    group.current.children[5].material.grayscale =
       1 + data.range(1.8 / 3, 1 / 3) / 3;
     group.current.children[5].material.grayscale =
       1 - data.range(1.6 / 3, 1 / 1);
-    group.current.children[6].material.zoom =
+    group.current.children[6].material.grayscale =
       1 + (1 - data.range(2 / 3, 1 / 3)) / 1;
   });
 
@@ -39,7 +38,7 @@ const Card = () => {
         ].map((url, index) => (
           <Image
             key={url}
-            position={[-11 + index * 3.5, -8 - index, -2]}
+            position={[-11 + index * 3.5, -8 - index, 0]}
             scale={[3, 8, 1]}
             url={url}
           />

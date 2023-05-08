@@ -11,7 +11,7 @@ import { useGLTF } from "@react-three/drei";
 export default function Lamp(props) {
   const { nodes, materials } = useGLTF("/lamp-transformed.glb");
   return (
-    <group {...props} dispose={null} position={[0.2, 3, 0]}>
+    <group {...props} dispose={null} position={[0, 3.5, -0.5]}>
       <mesh
         geometry={nodes.Object_4.geometry}
         material={materials.re_lamp_02}

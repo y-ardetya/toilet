@@ -12,18 +12,18 @@ const Vandal = () => {
       </Text>
       <Text
         font="/LosmentHunter-1G1ve.ttf"
-        position={[0, -2.32, 3.5]}
+        position={[0.8, -2.32, 3.5]}
         rotation={[-Math.PI / 2, 0, 0]}
         fontSize={0.4}
         maxWidth={8}
         anchorX={"center"}
         anchorY={"middle"}
       >
-        "Delve into the darkest corners of the human psyche and uncover chilling tales that will haunt your dreams - welcome to X, where nightmares become reality and the line between fiction and terror blurs."
+        {`Delve into the darkest corners of the human psyche and uncover chilling tales that will haunt your dreams - welcome to Catharsis,\nwhere nightmares become reality and the line between fiction and terror blurs`}
       </Text>
       <Text
         font="/LosmentHunter-1G1ve.ttf"
-        position={[5.13, -0.20, 0.54]}
+        position={[5.13, -0.2, 0.54]}
         rotation={[0, -1.537, 0]}
         fontSize={1.5}
       >
