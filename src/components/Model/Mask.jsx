@@ -23,10 +23,7 @@ export default function Mask(props) {
           <group rotation={[Math.PI / 2, 0, 0]}>
             <group>
               <group scale={1.8}>
-                <mesh
-                  geometry={nodes.horror_mask_mask_0.geometry}
-                  // material={materials.mask}
-                >
+                <mesh geometry={nodes.horror_mask_mask_0.geometry}>
                   <MeshTransmissionMaterial
                     ior={1.2}
                     thickness={1.5}
@@ -34,10 +31,7 @@ export default function Mask(props) {
                     chromaticAberration={0.04}
                   />
                 </mesh>
-                <mesh
-                  geometry={nodes.horror_mask_liner_0.geometry}
-                  // material={materials.liner}
-                >
+                <mesh geometry={nodes.horror_mask_liner_0.geometry}>
                   <MeshTransmissionMaterial
                     ior={1.2}
                     thickness={1.5}

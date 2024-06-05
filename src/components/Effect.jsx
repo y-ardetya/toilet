@@ -1,4 +1,9 @@
-import { Bloom, EffectComposer, Noise, Vignette } from "@react-three/postprocessing";
+import {
+  Bloom,
+  EffectComposer,
+  Noise,
+  Vignette,
+} from "@react-three/postprocessing";
 import { BlendFunction } from "postprocessing";
 
 const Effect = () => {

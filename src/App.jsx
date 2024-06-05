@@ -17,7 +17,7 @@ import Monster from "./components/Second/Monster";
 const App = () => {
   return (
     <>
-      <Canvas gl={{ antialias: true }}>
+      <Canvas gl={{ antialias: false }}>
         <Suspense fallback={null}>
           <PerspectiveCamera
             makeDefault
