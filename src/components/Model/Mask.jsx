@@ -10,7 +10,7 @@ Title: Horror Mask Scarecrow
 import { useGLTF, MeshTransmissionMaterial } from "@react-three/drei";
 
 export default function Mask(props) {
-  const { nodes, materials } = useGLTF("/mask-transformed.glb");
+  const { nodes } = useGLTF("/mask-transformed.glb");
 
   return (
     <group {...props} dispose={null}>
@@ -25,17 +25,17 @@ export default function Mask(props) {
               <group scale={1.8}>
                 <mesh geometry={nodes.horror_mask_mask_0.geometry}>
                   <MeshTransmissionMaterial
-                    ior={1.2}
+                    transmission={1}
+                    ior={1.5}
                     thickness={1.5}
-                    anisotropy={0.1}
                     chromaticAberration={0.04}
                   />
                 </mesh>
                 <mesh geometry={nodes.horror_mask_liner_0.geometry}>
                   <MeshTransmissionMaterial
-                    ior={1.2}
+                    transmission={1}
+                    ior={1.5}
                     thickness={1.5}
-                    anisotropy={0.1}
                     chromaticAberration={0.04}
                   />
                 </mesh>

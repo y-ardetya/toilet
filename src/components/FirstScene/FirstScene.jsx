@@ -1,25 +1,21 @@
-import Toilet from "../Model/Toilet";
 import { PresentationControls, Image } from "@react-three/drei";
+import FirstRoom from "./FirstRoom";
+
 import Vandal from "./Vandal";
 import Lamp from "../Model/Lamp";
+import Toilet from "../Model/Toilet";
 import blood from "../../assets/blood.svg";
-import Room from "./Room";
-import TrailingLight from "../TrailingLight";
 
-const Experience = () => {
+const FirstScene = () => {
   return (
     <>
-      <ambientLight intensity={0.1} />
-      <pointLight intensity={1.2} position={[0, 5.2, 0]} color="orange" />
-      <TrailingLight />
       <PresentationControls
         polar={[-0.3, 0.2]}
         azimuth={[-0.5, 0.5]}
         config={{ mass: 1, tension: 50 }}
         snap={{ mass: 2, tension: 75 }}
       >
-        <Room />
-
+        <FirstRoom />
         <Toilet />
         <Image
           url={blood}
@@ -29,11 +25,11 @@ const Experience = () => {
           transparent
           opacity={0.5}
         />
-        <Lamp />
         <Vandal />
       </PresentationControls>
+      <Lamp />
     </>
   );
 };
 
-export default Experience;
+export default FirstScene;
