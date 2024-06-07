@@ -15,7 +15,7 @@ export default function Toilet(props) {
     <group {...props} dispose={null}>
       <group
         name="toilet"
-        position={[-1.08, -2.322, 0]}
+        position={[-1.3, -2.313, 0]}
         scale={0.03}
         rotation={[0, -Math.PI / 2, 0]}
       >

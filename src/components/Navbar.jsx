@@ -1,12 +1,11 @@
+import React from "react";
+
 const Navbar = () => {
   return (
-    <div className="navbar">
-      <ul>
-        <li>HOME</li>
-        <li>CREEPYPASTA</li>
-        <li>CONTACT</li>
-        <li>EMAIL</li>
-      </ul>
+    <div className="nav">
+      <h1>Home</h1>
+      <h1>Project</h1>
+      <h1>Contact</h1>
     </div>
   );
 };

@@ -1,11 +1,10 @@
-import { EffectComposer, Noise, Vignette } from "@react-three/postprocessing";
-import { BlendFunction } from "postprocessing";
+import { Bloom, EffectComposer, Vignette } from "@react-three/postprocessing";
 
 const Effect = () => {
   return (
-    <EffectComposer>
-      <Noise premultiply blendFunction={BlendFunction.ADD} />
+    <EffectComposer enableNormalPass>
       <Vignette eskil={false} offset={0.3} darkness={0.9} />
+      <Bloom mipmapBlur luminanceThreshold={1} />
     </EffectComposer>
   );
 };
