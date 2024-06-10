@@ -5,14 +5,14 @@ const Vandal = () => {
     <>
       <Text
         font="/LosmentHunter-1G1ve.ttf"
-        position={[-5.50, 1.62, -2.53]}
+        position={[-5.5, 1.62, -1]}
         rotation={[0, 1.52, 0]}
       >
         Look behind you !
       </Text>
       <Text
         font="/LosmentHunter-1G1ve.ttf"
-        position={[0.8, -2.32, 3.5]}
+        position={[0.8, -2.32, 3.9]}
         rotation={[-Math.PI / 2, 0, 0]}
         fontSize={0.4}
         maxWidth={8}
@@ -27,7 +27,7 @@ const Vandal = () => {
         rotation={[0, -1.537, 0]}
         fontSize={1.5}
       >
-        YON STUDIO
+        Zero x Infinity
       </Text>
     </>
   );

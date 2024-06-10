@@ -25,7 +25,8 @@ const Walls = ({ ...props }) => {
         map={color}
         metalnessMap={metal}
         aoMap={ao}
-        metalness={0.5}
+        metalness={0.9}
+        roughness={0.1}
       />
     </mesh>
   );

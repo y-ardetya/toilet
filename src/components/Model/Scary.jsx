@@ -16,7 +16,7 @@ export default function Scary(props) {
   const { actions } = useAnimations(animations, group);
 
   useEffect(() => {
-    actions["Idle"].play();
+    actions["Idle"].play().setLoop(Infinity).setDuration(10);
   }, []);
   return (
     <group
@@ -24,7 +24,7 @@ export default function Scary(props) {
       {...props}
       dispose={null}
       scale={20}
-      position={[0, -72, -22]}
+      position={[0, -77, -18]}
     >
       <group name="Sketchfab_Scene">
         <group name="Sketchfab_model" rotation={[-Math.PI / 2, 0, 0]}>

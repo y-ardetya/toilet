@@ -33,8 +33,8 @@ export function Blamp(props) {
         scale={[0.007, 0.008, 0.008]}
       >
         <meshStandardMaterial
-          emissive="red"
-          emissiveIntensity={5}
+          emissive="white"
+          emissiveIntensity={10}
           toneMapped={false}
         />
       </mesh>

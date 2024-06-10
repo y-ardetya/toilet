@@ -1,3 +1,4 @@
+import { Text } from "@react-three/drei";
 import { Blamp } from "../Model/Blamp";
 import { Urinal } from "../Model/Urinal";
 import Walls from "../Walls";
@@ -44,6 +45,25 @@ const SecondRoom = () => {
           rotation={[0, Math.PI / 2, 0]}
         />
         <Blamp position={[0, -55.3, 0]} scale={3} />
+        <Text
+          font="/LosmentHunter-1G1ve.ttf"
+          position={[0, -35, 0]}
+          rotation={[0, 0, 0]}
+          fontSize={1.5}
+        >
+          YOU ARE NOT ALONE
+        </Text>
+        <Text
+          font="/LosmentHunter-1G1ve.ttf"
+          position={[0, -52, 0]}
+          rotation={[0, 0, 0]}
+          fontSize={1}
+          maxWidth={10}
+          anchorX={"center"}
+          textAlign="center"
+        >
+          BRAVE ENOUGH TO LOOK BEHIND YOU ?
+        </Text>
       </group>
     </>
   );

@@ -9,7 +9,7 @@ const Scene = () => {
   return (
     <>
       <Lights />
-      <fog attach="fog" args={["#000", -2, 18]} />
+      <fog attach="fog" args={["#000", -1, 18]} />
       <ScrollControls pages={4} damping={0.3} distance={1.2}>
         <Scroll html>
           <Navbar />
