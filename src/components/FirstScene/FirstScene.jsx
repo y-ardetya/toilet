@@ -5,6 +5,7 @@ import Vandal from "./Vandal";
 import Lamp from "../Model/Lamp";
 import Toilet from "../Model/Toilet";
 import blood from "../../assets/blood.svg";
+import { AdditiveBlending } from "three";
 
 const FirstScene = () => {
   return (
@@ -26,6 +27,15 @@ const FirstScene = () => {
           opacity={0.5}
         />
         <Vandal />
+        <mesh scale={0.58} position-y={1.5}>
+          <coneGeometry args={[5, 13, 32]} />
+          <meshBasicMaterial
+            color="orange"
+            transparent
+            opacity={0.2}
+            blending={AdditiveBlending}
+          />
+        </mesh>
       </PresentationControls>
       <Lamp />
     </>
