@@ -4,6 +4,8 @@ import { Loader } from "@react-three/drei";
 import { Suspense } from "react";
 
 import Scene from "./components/Scene";
+import Effect from "./components/Effect";
+import { useStore } from "./components/store/store";
 
 const App = () => {
   return (
@@ -17,6 +19,8 @@ const App = () => {
       >
         <Suspense fallback={null}>
           <Scene />
+          {/* {enableBloom ? <Effect /> : null} */}
+          <Effect />
         </Suspense>
       </Canvas>
       <Loader />

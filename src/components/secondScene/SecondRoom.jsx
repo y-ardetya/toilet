@@ -51,7 +51,7 @@ const SecondRoom = () => {
           rotation={[0, 0, 0]}
           fontSize={1.5}
         >
-          YOU ARE NOT ALONE
+          SOMEONE IS WATCHING... ALWAYS
         </Text>
         <Text
           font="/LosmentHunter-1G1ve.ttf"

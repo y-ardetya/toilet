@@ -1,5 +1,5 @@
 import { useMemo } from "react";
-import { AdditiveBlending, Color } from "three";
+import { AdditiveBlending, Color, Vector3 } from "three";
 import { PresentationControls, Image } from "@react-three/drei";
 
 import FirstRoom from "./FirstRoom";
@@ -11,13 +11,13 @@ import blood from "../../assets/blood.svg";
 const FirstScene = () => {
   const uniforms = useMemo(
     () => ({
-      color: { value: new Color("orange") },
-      transparency: { value: 0.2 },
-      edgeThickness: { value: 1 },
-      mRefractionRatio: { value: 1.02 },
-      mFresnelBias: { value: 0.2 },
-      mFresnelPower: { value: 2.0 },
-      mFresnelScale: { value: 1.0 },
+      color: { value: new Vector3(1.5, 1, 0.5) },
+      transparency: { value: 0.1 },
+      edgeThickness: { value: 5 },
+      // mRefractionRatio: { value: 1.02 },
+      // mFresnelBias: { value: 0.2 },
+      // mFresnelPower: { value: 2.0 },
+      // mFresnelScale: { value: 1.0 },
     }),
     []
   );
@@ -61,7 +61,7 @@ const FirstScene = () => {
 
                 vUv = uv;
               }
-        `}
+            `}
             fragmentShader={`
               varying vec2 vUv;
               varying vec3 vNormal;
@@ -93,17 +93,17 @@ const FirstScene = () => {
 
               // Calculate alpha based on the Fresnel-like effect
               float alpha = mix( 0. , transparency , pow(fresnel, edgeThickness));
-              alpha = alpha * smoothstep(0.6, 0.3, abs(0.5 - vUv.y));
+              alpha = alpha * smoothstep(0.5, 0.3, abs(0.5 - vUv.y));
               alpha = clamp(alpha,0.0,1.0);
               gl_FragColor = vec4(color, alpha);
-              // gl_FragColor = vec4(vNormal , 1.0);
+              // gl_FragColor = vec4(vec4(alpha ));
 
               #ifdef DITHERING
               gl_FragColor.rgba = dithering( gl_FragColor.rgba );
               #endif
 
               }
-`}
+            `}
           />
         </mesh>
       </PresentationControls>
